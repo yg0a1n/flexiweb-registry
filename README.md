@@ -1,4 +1,10 @@
-# FlexiWeb Design System — v1
+# FlexiWeb Design System — v1.1
+
+**v1.1 (2026-07-04)** — gaps remontés par les 4 câblages (valeurs déjà arbitrées, zéro nouveau goût) :
+- `--on-brand` exposé dans `theme.css` (était tokens.json only)
+- échelle radius exportée : `--radius-sm/.375 · md/.625 · lg/.75 · xl/1 · 2xl/1.5rem` (+ mappings `@theme`)
+- slot `--font-display` = Fraunces (alias `--font-serif`) + `font.display` dans tokens.json
+- Exclu (décision agent-os #1043) : cream-deep/yellow/border-strong (site-express) et urgent-* (cms) restent **site-local** — le DS reste canonique.
 
 Bootstrap du DS FlexiWeb (volet V2b). Source : extraction `flexiweb-evo.eu` + `b2b.flexiweb-evo.eu` + gabarit `p4-garantis.html`. Décisions **arbitrées par yg0a1n le 2026-07-03**.
 
