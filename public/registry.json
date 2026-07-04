@@ -1,0 +1,55 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "flexiweb",
+  "homepage": "https://flexiweb-evo.eu",
+  "items": [
+    {
+      "name": "flexiweb-theme",
+      "type": "registry:theme",
+      "title": "FlexiWeb Theme",
+      "description": "Thème vert FlexiWeb (Hanken Grotesk + Fraunces). Importable dans v0.",
+      "cssVars": {
+        "theme": {
+          "font-sans": "Hanken Grotesk, ui-sans-serif, system-ui, sans-serif",
+          "font-serif": "Fraunces, ui-serif, Georgia, serif",
+          "font-mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
+          "radius": "0.625rem"
+        },
+        "light": {
+          "background": "#ffffff",
+          "foreground": "#1f2937",
+          "card": "#ffffff",
+          "card-foreground": "#1f2937",
+          "popover": "#ffffff",
+          "popover-foreground": "#1f2937",
+          "primary": "#0a5a28",
+          "primary-foreground": "#ffffff",
+          "secondary": "#f6faf6",
+          "secondary-foreground": "#0c5526",
+          "muted": "#f6faf6",
+          "muted-foreground": "#4b5563",
+          "accent": "#eef5ee",
+          "accent-foreground": "#0c5526",
+          "destructive": "#bf000f",
+          "destructive-foreground": "#ffffff",
+          "border": "#e2e8e4",
+          "input": "#e2e8e4",
+          "ring": "#16a34a",
+          "brand": "#16a34a",
+          "brand-strong": "#0a5a28",
+          "brand-deep": "#0c5526",
+          "brand-accent": "#9acd32",
+          "surface": "#f6faf6",
+          "cream": "#eef5ee",
+          "sage": "#d7edda",
+          "sage-soft": "#e8f3ea",
+          "chart-1": "#16a34a",
+          "chart-2": "#0a5a28",
+          "chart-3": "#9acd32",
+          "chart-4": "#6fa01f",
+          "chart-5": "#4b5563"
+        }
+      }
+    }
+  ]
+}

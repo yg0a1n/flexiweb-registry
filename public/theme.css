@@ -1,0 +1,80 @@
+/* Design System FlexiWeb — thème v1 (arbitré 2026-07-03).
+   shadcn-compatible + tokens de marque + fonts. Light only (dark mode = v2). */
+:root {
+  /* --- marque --- */
+  --brand: #16a34a;
+  --brand-strong: #0a5a28;
+  --brand-deep: #0c5526;
+  --brand-accent: #9acd32;
+  --brand-accent-ink: #6fa01f;
+  --gradient-brand: linear-gradient(135deg, #0c5526 0%, #0c5526 58%, #16a34a 80%, #9acd32 100%);
+
+  /* --- surfaces vertes tintées --- */
+  --surface: #f6faf6;
+  --cream: #eef5ee;
+  --sage: #d7edda;
+  --sage-soft: #e8f3ea;
+
+  /* --- shadcn semantic (light) --- */
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #0a5a28;
+  --primary-foreground: #ffffff;
+  --secondary: #f6faf6;
+  --secondary-foreground: #0c5526;
+  --muted: #f6faf6;
+  --muted-foreground: #4b5563;
+  --accent: #eef5ee;
+  --accent-foreground: #0c5526;
+  --destructive: #bf000f;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8e4;
+  --input: #e2e8e4;
+  --ring: #16a34a;
+  --heading: #0c5526;
+  --faint: #6b7280;
+
+  --chart-1: #16a34a;
+  --chart-2: #0a5a28;
+  --chart-3: #9acd32;
+  --chart-4: #6fa01f;
+  --chart-5: #4b5563;
+
+  --radius: 0.625rem;
+
+  /* --- fonts --- */
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+/* Tailwind v4 — mapping @theme (importe les tokens dans les utilitaires tw) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-accent: var(--brand-accent);
+  --color-surface: var(--surface);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+  --radius: var(--radius);
+}

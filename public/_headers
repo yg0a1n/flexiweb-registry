@@ -1,0 +1,7 @@
+/r/*
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
+
+/registry.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
