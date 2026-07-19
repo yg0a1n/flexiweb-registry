@@ -26,6 +26,12 @@
   --sand: #f6eedf;
   --sand-deep: #e8d8bc;
 
+  /* CONVENTION « surface de card » (v1.2, validée diag #9/#10) : pour colorer des cards sur un
+     fond neutre, alterner 3 fonds = 1 vert (--sage-soft) + 2 beiges (--sand, --sand-deep). La
+     surface la plus soutenue (--sand-deep) porte une bordure TRANSPARENTE (une bordure sand-deep
+     y serait invisible). Le beige/vert porte le FOND, jamais le texte. Contraste AA tenu sur les
+     3 fonds (le plus serré = --muted-foreground sur --sand-deep, 5.39:1). */
+
   /* --- shadcn semantic (light) --- */
   --background: #ffffff;
   --foreground: #1f2937;
