@@ -20,6 +20,12 @@
   --sage: #d7edda;
   --sage-soft: #e8f3ea;
 
+  /* --- neutres chauds (v1.2, arbitrés yg0a1n 2026-07-19) : réchauffent la palette verte
+     sans clash (undertone jaune doux). Fonds de sections + bordures/chips. Jamais le texte.
+     Contraste WCAG AA vérifié : texte DS sur --sand 6.5–12.7:1, sur --sand-deep 5.4–10.5:1. --- */
+  --sand: #f6eedf;
+  --sand-deep: #e8d8bc;
+
   /* --- shadcn semantic (light) --- */
   --background: #ffffff;
   --foreground: #1f2937;
@@ -85,6 +91,8 @@
   --color-cream: var(--cream);
   --color-sage: var(--sage);
   --color-sage-soft: var(--sage-soft);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
   --color-on-brand: var(--on-brand);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
