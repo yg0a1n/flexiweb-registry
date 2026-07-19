@@ -12,12 +12,17 @@
         "theme": {
           "font-sans": "Hanken Grotesk, ui-sans-serif, system-ui, sans-serif",
           "font-serif": "Fraunces, ui-serif, Georgia, serif",
+          "font-display": "Fraunces, ui-serif, Georgia, serif",
           "font-mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
-          "radius": "0.625rem"
+          "radius": "0.625rem",
+          "gradient-brand": "linear-gradient(135deg, #0c5526 0%, #0c5526 58%, #16a34a 80%, #9acd32 100%)"
         },
         "light": {
           "background": "#ffffff",
           "foreground": "#1f2937",
+          "heading": "#0c5526",
+          "faint": "#6b7280",
+          "on-brand": "#ffffff",
           "card": "#ffffff",
           "card-foreground": "#1f2937",
           "popover": "#ffffff",
@@ -36,10 +41,13 @@
           "border-strong": "#cbd5cf",
           "input": "#e2e8e4",
           "ring": "#16a34a",
+          "ring-strong": "#0c5526",
+          "ring-offset": "#ffffff",
           "brand": "#16a34a",
           "brand-strong": "#0a5a28",
           "brand-deep": "#0c5526",
           "brand-accent": "#9acd32",
+          "brand-accent-ink": "#6fa01f",
           "accent-soft": "#d4ed9f",
           "surface": "#f6faf6",
           "cream": "#eef5ee",
