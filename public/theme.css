@@ -178,7 +178,23 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* shadow (orphelins distribués → utilitaires shadow-*) */
+  /* line-height (Lot 4 #14 → utilitaires leading-*) : tight=titres display, normal=corps */
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* letter-spacing (Lot 4 #14 → utilitaires tracking-*) : wide 0.08em = eyebrows uppercase (usage diag) */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* shadow (Lot 1 sm/md + Lot 4 xs/lg/xl → utilitaires shadow-*) — undertone noir faible-opacité */
+  --shadow-xs: 0 1px 1px 0 rgba(0,0,0,0.04);
   --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
   --shadow-md: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-xl: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
 }
