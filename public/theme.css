@@ -24,7 +24,11 @@
 
   /* --- neutres chauds (v1.2, arbitrés yg0a1n 2026-07-19) : réchauffent la palette verte
      sans clash (undertone jaune doux). Fonds de sections + bordures/chips. Jamais le texte.
-     Contraste WCAG AA vérifié : texte DS sur --sand 6.5–12.7:1, sur --sand-deep 5.4–10.5:1. --- */
+     Contraste WCAG AA vérifié pour le CORPS (--foreground/--heading/--muted-foreground) :
+     sur --sand 6.5–12.7:1, sur --sand-deep 5.4–10.5:1.
+     ⚠️ EXCEPTION (Lot 1 #8) : --faint #6b7280 tombe SOUS AA sur ces surfaces teintées
+     (et sur les surfaces vertes) — ne pas l'utiliser en texte dessus ; garde-fou
+     faint→muted-foreground prévu au Lot 3. --- */
   --sand: #f6eedf;
   --sand-deep: #e8d8bc;
 
@@ -65,6 +69,12 @@
   --border-strong: #cbd5cf; /* bordure d'emphase (vert-gris) — sépare mieux que --border */
   --input: #e2e8e4;
   --ring: #16a34a;
+  /* focus-ring a11y (Lot 1 #8) : --ring #16a34a tient <3:1 sur 9/11 fonds dont les surfaces
+     teintées (sage-soft/sand/sand-deep = cards) → focus clavier quasi invisible. Sur surface de
+     card : utiliser --ring-strong (contraste fort) ET/OU l'offset --ring-offset (halo = fond,
+     pattern shadcn ring-offset). 0 nouvelle couleur : alias de valeurs existantes. */
+  --ring-strong: #0c5526; /* = --brand-deep — focus ring pour surfaces teintées */
+  --ring-offset: #ffffff;  /* = --background — halo entre l'élément et le ring */
   --heading: #0c5526;
   --faint: #6b7280;
 
@@ -98,15 +108,19 @@
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
   --color-accent: var(--accent);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-ring: var(--ring);
+  --color-ring-strong: var(--ring-strong);
+  --color-ring-offset: var(--ring-offset);
   --color-brand: var(--brand);
   --color-brand-strong: var(--brand-strong);
   --color-brand-deep: var(--brand-deep);
   --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-ink: var(--brand-accent-ink);
   --color-accent-soft: var(--accent-soft);
   --color-surface: var(--surface);
   --color-cream: var(--cream);
@@ -126,4 +140,25 @@
   --radius-lg: var(--radius-lg);
   --radius-xl: var(--radius-xl);
   --radius-2xl: var(--radius-2xl);
+
+  /* fontSize (Lot 1 #8 : orphelins tokens.json désormais distribués → utilitaires text-*) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+
+  /* fontWeight (orphelins distribués → utilitaires font-*) */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* shadow (orphelins distribués → utilitaires shadow-*) */
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-md: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
 }
