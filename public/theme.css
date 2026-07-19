@@ -11,12 +11,14 @@
   --brand-deep: #0c5526;
   --brand-accent: #9acd32;
   --brand-accent-ink: #6fa01f;
+  --accent-soft: #d4ed9f; /* tint pâle de --brand-accent : FONDS highlight/chips accent doux (jamais le texte) */
   --on-brand: #ffffff;
   --gradient-brand: linear-gradient(135deg, #0c5526 0%, #0c5526 58%, #16a34a 80%, #9acd32 100%);
 
   /* --- surfaces vertes tintées --- */
   --surface: #f6faf6;
   --cream: #eef5ee;
+  --cream-deep: #e3efe3; /* cran vert soutenu sous sage-soft */
   --sage: #d7edda;
   --sage-soft: #e8f3ea;
 
@@ -31,6 +33,16 @@
      surface la plus soutenue (--sand-deep) porte une bordure TRANSPARENTE (une bordure sand-deep
      y serait invisible). Le beige/vert porte le FOND, jamais le texte. Contraste AA tenu sur les
      3 fonds (le plus serré = --muted-foreground sur --sand-deep, 5.39:1). */
+
+  /* ÉCHELLE DE SURFACES (v1.3, #14) — noms sémantiques conservés, ordonnés par luminance (clair→foncé),
+     en DEUX familles de température (choisir selon l'intention : vert = sobre/marque, beige = chaleureux) :
+       froide (verte)  : --surface .946 → --cream .897 → --sage-soft .872 → --cream-deep .836 → --sage .801
+       chaude (beige)  : --sand .861 → --sand-deep .699
+     Bordures : --border (neutre) < --border-strong (emphase, sépare mieux). Highlight accent : --accent-soft.
+     ATOMES (recettes token, jamais de hex) :
+       pill  = rounded-full + bg-{tone} + text-{ink} + px-3 py-1 text-xs font-semibold ; tone∈{sage-soft,sand-deep,accent-soft}, ink∈{brand-strong,brand-deep}
+       badge = pill compact (px-2 py-0.5 text-[.7rem])
+       card-tone = convention surface de card ci-dessus (+ --cream-deep = 4e tone vert renforcé) */
 
   /* --- shadcn semantic (light) --- */
   --background: #ffffff;
@@ -50,6 +62,7 @@
   --destructive: #bf000f;
   --destructive-foreground: #ffffff;
   --border: #e2e8e4;
+  --border-strong: #cbd5cf; /* bordure d'emphase (vert-gris) — sépare mieux que --border */
   --input: #e2e8e4;
   --ring: #16a34a;
   --heading: #0c5526;
@@ -88,13 +101,16 @@
   --color-accent: var(--accent);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-strong: var(--brand-strong);
   --color-brand-deep: var(--brand-deep);
   --color-brand-accent: var(--brand-accent);
+  --color-accent-soft: var(--accent-soft);
   --color-surface: var(--surface);
   --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
   --color-sage: var(--sage);
   --color-sage-soft: var(--sage-soft);
   --color-sand: var(--sand);
