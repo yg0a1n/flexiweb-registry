@@ -141,6 +141,11 @@
   --radius-xl: var(--radius-xl);
   --radius-2xl: var(--radius-2xl);
 
+  /* spacing (Lot 2 #10) — base multiplicative Tailwind v4 : génère p-*/m-*/gap-*/space-* (p-1=4px).
+     RYTHME DS recommandé (multiples de 4, harmonisé au pas radius) : 4/8/12/16(card)/24(gap section)/
+     32/48(section vertical mobile)/64(desktop)/96(hero) px = p-1/2/3/4/6/8/12/16/24. */
+  --spacing: 0.25rem;
+
   /* fontSize (Lot 1 #8 : orphelins tokens.json désormais distribués → utilitaires text-*) */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

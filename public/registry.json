@@ -15,6 +15,7 @@
           "font-display": "Fraunces, ui-serif, Georgia, serif",
           "font-mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
           "radius": "0.625rem",
+          "spacing": "0.25rem",
           "gradient-brand": "linear-gradient(135deg, #0c5526 0%, #0c5526 58%, #16a34a 80%, #9acd32 100%)"
         },
         "light": {
