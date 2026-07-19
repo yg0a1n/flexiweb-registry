@@ -108,6 +108,67 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
 }
 
+/* DARK MODE (v2, Lot 5 #16) — palette DÉRIVÉE de la light (pas inversion naïve) : fonds
+   verts-noirs, texte clair, brand/états ÉCLAIRCIS pour rester vibrants + tenir l'AA sur sombre.
+   Le @theme ci-dessous référence les var() → bascule auto quand .dark est posé. Valeurs light
+   INTACTES. Contraste AA vérifié : foreground 14–16:1, muted-fg 7.6–8:1, brand 10.7:1, états 6.7–11:1. */
+.dark {
+  /* marque (éclaircie pour le sombre) */
+  --brand: #4ade80;               /* vert vif lisible sur fond dark */
+  --brand-strong: #22c55e;        /* actions/primary */
+  --brand-deep: #16a34a;
+  --brand-accent: #a3e635;
+  --brand-accent-ink: #84cc16;
+  --accent-soft: #14532d;         /* fond highlight doux = vert profond (rôle inversé) */
+  --on-brand: #06120b;            /* texte SUR les boutons vifs = sombre */
+  --gradient-brand: linear-gradient(135deg, #06120b 0%, #14532d 58%, #22c55e 80%, #4ade80 100%);
+
+  /* surfaces = panneaux dark tintés */
+  --surface: #101a14;
+  --cream: #111d16;
+  --cream-deep: #16241c;
+  --sage: #1c2e24;
+  --sage-soft: #16241c;
+  --sand: #1f1b12;                /* panneau dark chaud */
+  --sand-deep: #2a2416;
+
+  /* shadcn semantic (dark) */
+  --background: #0b1510;
+  --foreground: #e7f0ea;
+  --card: #111d16;
+  --card-foreground: #e7f0ea;
+  --popover: #111d16;
+  --popover-foreground: #e7f0ea;
+  --primary: #22c55e;
+  --primary-foreground: #06120b;
+  --secondary: #16241c;
+  --secondary-foreground: #e7f0ea;
+  --muted: #16241c;
+  --muted-foreground: #9db0a5;
+  --accent: #1c2e24;
+  --accent-foreground: #e7f0ea;
+  --destructive: #f87171;         /* rouge éclairci (AA sur dark) */
+  --destructive-foreground: #06120b;
+  /* états sémantiques (dark) — vibrants, foreground sombre (badge) ou texte sur fond dark */
+  --success: #34d399;             --success-foreground: #06120b;
+  --warning: #fbbf24;             --warning-foreground: #06120b;
+  --info:    #60a5fa;             --info-foreground:    #06120b;
+  --border: #24352b;
+  --border-strong: #33463a;
+  --input: #24352b;
+  --ring: #4ade80;
+  --ring-strong: #4ade80;         /* déjà vif sur dark → même valeur */
+  --ring-offset: #0b1510;         /* = --background */
+  --heading: #e7f0ea;
+  --faint: #8a978f;               /* réservé texte sur --background/--surface (AA 5.9–6.1:1) */
+
+  --chart-1: #4ade80;
+  --chart-2: #22c55e;
+  --chart-3: #a3e635;
+  --chart-4: #84cc16;
+  --chart-5: #9db0a5;
+}
+
 /* Tailwind v4 — mapping @theme (importe les tokens dans les utilitaires tw) */
 @theme inline {
   --color-background: var(--background);
