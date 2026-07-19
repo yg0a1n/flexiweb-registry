@@ -65,6 +65,12 @@
   --accent-foreground: #0c5526;
   --destructive: #bf000f;
   --destructive-foreground: #ffffff;
+  /* états sémantiques (Lot 3 #12) — même registre que --destructive (foncé saturé + fg blanc).
+     Chacun tient AA en FOND (badge/toast, fg blanc) ET en TEXTE sur background/surface.
+     --success = émeraude DISTINCT du vert de marque #16a34a (plus froid/foncé, ne se confond pas). */
+  --success: #047857;             --success-foreground: #ffffff;
+  --warning: #b45309;             --warning-foreground: #ffffff;
+  --info:    #1d4ed8;             --info-foreground:    #ffffff;
   --border: #e2e8e4;
   --border-strong: #cbd5cf; /* bordure d'emphase (vert-gris) — sépare mieux que --border */
   --input: #e2e8e4;
@@ -76,6 +82,9 @@
   --ring-strong: #0c5526; /* = --brand-deep — focus ring pour surfaces teintées */
   --ring-offset: #ffffff;  /* = --background — halo entre l'élément et le ring */
   --heading: #0c5526;
+  /* GARDE-FOU (Lot 3 #12, referme le trou Lot 1) : --faint est RÉSERVÉ au texte normal sur
+     --background / --surface uniquement. Sur toute surface teintée (cream/sage/sand/…) ou colorée,
+     --faint tombe sous AA → utiliser --muted-foreground à la place. */
   --faint: #6b7280;
 
   --chart-1: #16a34a;
@@ -111,6 +120,12 @@
   --color-faint: var(--faint);
   --color-accent: var(--accent);
   --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-ring: var(--ring);
