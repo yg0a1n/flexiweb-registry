@@ -1,5 +1,6 @@
 /* Design System FlexiWeb — thème v1.1 (2026-07-04).
-   shadcn-compatible + tokens de marque + fonts. Light only (dark mode = v2).
+   shadcn-compatible + tokens de marque + fonts. Clair et sombre : le bloc .dark
+   ci-dessous expose les 49 variables, miroir exact des 49 claires.
    v1.1 (gaps remontés par les 4 câblages, valeurs déjà arbitrées v1) :
    + --on-brand exposé dans theme.css (était tokens.json only)
    + échelle radius exportée (--radius-sm..2xl, valeurs tokens.json)
