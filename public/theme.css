@@ -218,9 +218,18 @@
   --radius-xl: var(--radius-xl);
   --radius-2xl: var(--radius-2xl);
 
-  /* spacing (Lot 2 #10) — base multiplicative Tailwind v4 : génère p-*/m-*/gap-*/space-* (p-1=4px).
-     RYTHME DS recommandé (multiples de 4, harmonisé au pas radius) : 4/8/12/16(card)/24(gap section)/
-     32/48(section vertical mobile)/64(desktop)/96(hero) px = p-1/2/3/4/6/8/12/16/24. */
+  /* spacing (Lot 2 #10) — base multiplicative Tailwind v4 : génère les utilitaires
+     p-N, m-N, gap-N et space-N (p-1 = 4px).
+     RYTHME DS recommandé (multiples de 4, harmonisé au pas radius) : 4, 8, 12, 16 (card),
+     24 (gap section), 32, 48 (section vertical mobile), 64 (desktop), 96 (hero) px,
+     soit p-1, p-2, p-3, p-4, p-6, p-8, p-12, p-16, p-24.
+
+     ATTENTION EN REFORMULANT CE COMMENTAIRE : ne jamais accoler une étoile et une barre
+     oblique. La séquence referme le commentaire en pleine phrase, le reste du texte devient
+     du CSS invalide, et le build Tailwind échoue sur « @theme blocks must only contain
+     custom properties ». C'est ce qui s'était produit ici : trois motifs d'utilitaires
+     écrits avec une étoile suivie d'une barre oblique fermaient le bloc trois fois.
+     Écrire les utilitaires sous la forme p-N, ou séparés par des virgules. */
   --spacing: 0.25rem;
 
   /* fontSize (Lot 1 #8 : orphelins tokens.json désormais distribués → utilitaires text-*) */
