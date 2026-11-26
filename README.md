@@ -89,9 +89,9 @@ En plus du thème de marque `flexiweb-theme`, le dépôt porte des **directions 
 
 L'item de registre correspondant est `public/r/<nom>.json`, listé dans `public/registry.json`.
 
-| Thème | Prolonge | Pour quoi | Note de yg0a1n |
-|---|---|---|---|
-| `nuit-atelier` | `flexiweb-theme` | page vitrine ou éditoriale FlexiWeb qui doit marquer au premier coup d'œil (sections de nuit, halo citron, Instrument Serif) ; en production sur /atelier | aucune ; paroles du 26/11 : « je vais m'en contenter » |
+| Thème | Prolonge | Pour quoi |
+|---|---|---|
+| `nuit-atelier` | `flexiweb-theme` | page vitrine ou éditoriale FlexiWeb qui doit marquer au premier coup d'œil (sections de nuit, halo citron, Instrument Serif) ; en production sur https://www.flexiweb-evo.eu/atelier |
 
 ### Installer un thème
 

@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: nuit-atelier
-description: Thème FlexiWeb de nuit. Sections de nuit alternées avec le sable, halo citron, titres d'affiche en Instrument Serif. Prolonge flexiweb-theme (aucune valeur redéfinie). Extrait de /atelier en production (flexiweb-landing-page, PR #155 et #157).
+description: Thème FlexiWeb de nuit. Sections de nuit alternées avec le sable, halo citron, titres d'affiche en Instrument Serif. Prolonge flexiweb-theme (aucune valeur redéfinie). Extrait de /atelier en production (https://www.flexiweb-evo.eu/atelier).
 omitted: []
 colors:
   nuit: "#06200f"
@@ -28,7 +28,7 @@ rounded:
 
 # DESIGN.md — nuit-atelier
 
-Origine : brief v2 « nuit d'atelier » d'agent-tools (26/11/2026, `cloud-mac/assets/output/agent-tools/2026-11-26-passe-style-atelier/brief-v2-direction-nuit.md`), implémenté sur /atelier par builder-runner (PR #155, puis #157 après gate). Paroles de yg0a1n le 26/11, rapportées par agent-os (#5308) : « je vais m'en contenter », puis « Déploie http://localhost:3002/atelier pour moi ». Note : aucune à ce jour.
+Origine : direction « nuit d'atelier » (26/11/2026), en production sur https://www.flexiweb-evo.eu/atelier.
 
 ## Overview
 
