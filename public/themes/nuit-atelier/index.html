@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aperçu du thème nuit-atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Hanken+Grotesk:wght@400;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../theme.css">
+<link rel="stylesheet" href="theme.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--background); color: var(--foreground); font: 400 17px/1.6 var(--font-sans); }
+  .page { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+  section { padding: 88px 0; }
+  h2 { color: var(--heading); margin: 0 0 16px; }
+  h3 { font-family: var(--font-serif); color: var(--heading); margin: 0; }
+  p { margin: 0; }
+  .chapo { font-size: 19px; color: var(--nuit-attenue); max-width: 640px; margin: 0 auto; }
+  .na-chiffres { margin-top: 56px; }
+  .libelle { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 700; color: var(--nuit-attenue); }
+  .detail { display: block; margin-top: 10px; font-size: 14.5px; color: var(--nuit-attenue); }
+  .sable { background: var(--sand); }
+  .intro { color: var(--muted-foreground); max-width: 680px; }
+  .na-carte { margin-top: 32px; padding: 28px; }
+  .na-carte p { color: var(--muted-foreground); margin-top: 8px; }
+  .pastille { display: inline-block; margin-top: 14px; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; background: var(--sand-deep); color: var(--partiel-encre); }
+  .na-grille { margin-top: 40px; }
+  .na-grille h3 { font-family: var(--font-sans); font-size: 20px; font-weight: 700; }
+  .na-grille p { color: var(--muted-foreground); margin-top: 10px; font-size: 15.5px; }
+  .na-grille a { color: inherit; text-decoration: none; }
+  .na-appel .page { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .na-appel p { color: var(--nuit-attenue); max-width: 620px; }
+  .bouton-clair { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: var(--radius); background: #fff; color: var(--brand-deep); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="na-bandeau">
+  <div class="page">
+    <h1>L'aperçu</h1>
+    <p class="chapo">Les textes et les chiffres de cette page sont des exemples : le thème ne porte que le style. Sources et contrastes dans DESIGN.md.</p>
+    <div class="na-chiffres">
+      <div class="na-phare"><span class="libelle">Premier chiffre</span><span class="na-valeur">128</span><span class="detail">en citron, le seul de la rangée</span></div>
+      <div><span class="libelle">Deuxième</span><span class="na-valeur">12</span><span class="detail">un détail sous le chiffre</span></div>
+      <div><span class="libelle">Troisième</span><span class="na-valeur">7</span><span class="detail">un détail sous le chiffre</span></div>
+      <div><span class="libelle">Quatrième</span><span class="na-valeur">3</span><span class="detail">un détail sous le chiffre</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="sable" aria-labelledby="t-sable">
+    <div class="page">
+      <h2 id="t-sable" class="na-affiche">Une section sur le sable</h2>
+      <p class="intro">Le sable alterne avec la nuit. Les titres de section sont en police d'affichage, en vert profond.</p>
+      <div class="na-carte">
+        <h3>Une carte blanche</h3>
+        <p>Rayon de 22 px, ombre teintée de vert.</p>
+        <span class="pastille">En partie</span>
+      </div>
+    </div>
+  </section>
+  <section class="na-nuit" aria-labelledby="t-nuit">
+    <div class="page">
+      <h2 id="t-nuit" class="na-affiche">Une section de nuit</h2>
+      <p class="na-attenue intro">Texte secondaire atténué sur la nuit.</p>
+      <div class="na-chiffres" style="--na-colonnes: 3">
+        <div class="na-phare"><span class="libelle">Tuile un</span><span class="na-valeur">4,6</span></div>
+        <div><span class="libelle">Tuile deux</span><span class="na-valeur">31</span></div>
+        <div><span class="libelle">Tuile trois</span><span class="na-valeur">9</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="sable" aria-labelledby="t-grille">
+    <div class="page">
+      <h2 id="t-grille" class="na-affiche">Une grille à filets</h2>
+      <p class="intro">Au survol ou au focus, la barre de gauche grandit et le titre glisse.</p>
+      <ul class="na-grille">
+        <li><h3><a href="#t-grille"><span class="na-titre">Premier savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+        <li><h3><a href="#t-grille"><span class="na-titre">Deuxième savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+        <li><h3><a href="#t-grille"><span class="na-titre">Troisième savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+        <li><h3><a href="#t-grille"><span class="na-titre">Quatrième savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+        <li><h3><a href="#t-grille"><span class="na-titre">Cinquième savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+        <li><h3><a href="#t-grille"><span class="na-titre">Sixième savoir-faire</span></a></h3><p>Une ligne de description.</p></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="na-appel">
+  <div class="page">
+    <div>
+      <h2 class="na-affiche" style="color: var(--nuit-texte)">Un appel à l'action</h2>
+      <p>Le halo citron passe en bas.</p>
+    </div>
+    <a class="bouton-clair" href="#t-sable">Un bouton clair</a>
+  </div>
+</footer>
+</body>
+</html>
