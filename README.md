@@ -4,7 +4,7 @@ Le design system de **FlexiWeb EVO** : des tokens de marque et un thème
 [shadcn/ui](https://ui.shadcn.com/) prêt à poser sur un projet — ou à importer dans
 [v0](https://v0.dev/) par URL.
 
-Un seul thème, `flexiweb-theme` : palette verte de marque, **Hanken Grotesk** en corps,
+Le thème de marque, `flexiweb-theme`, et une bibliothèque de thèmes (voir plus bas) : palette verte de marque, **Hanken Grotesk** en corps,
 **Fraunces** en display, modes clair et sombre.
 
 ## Contenu du dépôt
@@ -75,6 +75,29 @@ système. Échelles de taille, graisse, interlignage et interlettrage définies 
 
 **Modes clair et sombre** — 49 variables chacun, en miroir strict entre `tokens.json`,
 `theme.css` et le registry.
+
+## Bibliothèque de thèmes
+
+En plus du thème de marque `flexiweb-theme`, le dépôt porte des **directions validées**, réutilisables d'un projet à l'autre sans refaire la recherche de design. Chaque thème vit dans `public/themes/<nom>/` :
+
+| Fichier | Rôle |
+|---|---|
+| `tokens.json` | Les valeurs du thème, au format DTCG : **source de vérité** |
+| `theme.css` | Variables CSS + bloc `@theme inline` pour Tailwind v4 + recettes de classes préfixées |
+| `DESIGN.md` | Composants retenus (site, nom, lien), contrastes mesurés, à faire / à ne pas faire (format Google Labs) |
+| `index.html` | Page d'aperçu |
+
+L'item de registre correspondant est `public/r/<nom>.json`, listé dans `public/registry.json`.
+
+| Thème | Prolonge | Pour quoi | Note de yg0a1n |
+|---|---|---|---|
+| `nuit-atelier` | `flexiweb-theme` | page vitrine ou éditoriale FlexiWeb qui doit marquer au premier coup d'œil (sections de nuit, halo citron, Instrument Serif) ; en production sur /atelier | aucune ; paroles du 26/11 : « je vais m'en contenter » |
+
+### Installer un thème
+
+- **Projet shadcn + Tailwind v4** (un `components.json` existe) : `npx shadcn@latest add https://raw.githubusercontent.com/yg0a1n/flexiweb-registry/main/public/r/<nom>.json`. Le thème de marque vient avec lui (`registryDependencies`). Les recettes de classes (`.na-*` pour nuit-atelier) ne passent pas par le registre : copier aussi `themes/<nom>/theme.css`.
+- **Projet sans shadcn** (CSS simple) : copier `public/theme.css` puis `public/themes/<nom>/theme.css` dans le projet, et les importer dans cet ordre. Le bloc `@theme` y est ignoré par le navigateur.
+- Charger les polices du thème (voir son `DESIGN.md`) : le registre ne les installe pas.
 
 ## Faire évoluer
 

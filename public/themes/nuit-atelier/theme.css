@@ -1,0 +1,104 @@
+/* Thème « nuit-atelier » v1 (agent-tools, 2026-11-26) : miroir de tokens.json, qui fait foi.
+   PROLONGE flexiweb-theme : importer d'abord ../../theme.css (ou le thème FlexiWeb du projet), puis ce fichier. Aucune variable de flexiweb-theme n'est redéfinie ici.
+   Référence en production : /atelier de flexiweb-landing-page (atelier.css à bb39755), où ces valeurs sont portées par .atelier.
+   Police d'affichage : Instrument Serif (Google Fonts, OFL), à charger par le projet. Avec next/font : Instrument_Serif({ weight: "400", style: ["normal", "italic"],
+   variable: "--font-instrument-serif" }) ; --font-affiche la reprend, avec repli sur Instrument Serif installée, puis sur --font-serif (Fraunces). */
+:root {
+  --nuit: #06200f;
+  --nuit-texte: #f6faf6;
+  --nuit-attenue: #b5c7bb;
+  --nuit-filet: rgba(255, 255, 255, 0.12);
+  --partiel-encre: #7c4a03; /* sur --sand-deep : 5,27 */
+  --halo: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(154, 205, 50, 0.3), transparent 70%);
+  --halo-bas: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(154, 205, 50, 0.3), transparent 70%);
+  --font-affiche: var(--font-instrument-serif, "Instrument Serif"), var(--font-serif, Georgia), serif;
+  --radius-carte: 22px;
+  --ombre-carte: 0 1px 2px rgba(12, 85, 38, 0.06), 0 8px 24px -8px rgba(12, 85, 38, 0.18);
+}
+
+@theme inline {
+  --color-nuit: var(--nuit);
+  --color-nuit-texte: var(--nuit-texte);
+  --color-nuit-attenue: var(--nuit-attenue);
+  --color-nuit-filet: var(--nuit-filet);
+  --color-partiel-encre: var(--partiel-encre);
+  --font-affiche: var(--font-affiche);
+  --radius-carte: var(--radius-carte);
+  --shadow-carte: var(--ombre-carte);
+}
+
+/* Recettes, préfixe .na- (rien ne fuit hors des éléments qui portent la classe). Ce sont les règles de /atelier, rendues génériques. */
+
+/* Section de nuit. Alterner avec une section sable (var(--sand)) ou blanche ; jamais deux sections de nuit de suite. */
+.na-nuit { background: var(--nuit); color: var(--nuit-texte); }
+.na-nuit h2 { color: var(--nuit-texte); }
+.na-nuit .na-attenue { color: var(--nuit-attenue); }
+
+/* Bandeau (Tailark Veil Hero Section) : pleine largeur, halo citron en haut, trame de lignes très légère masquée en radial. */
+.na-bandeau { position: relative; overflow: hidden; background: var(--halo), var(--nuit); color: var(--nuit-texte); text-align: center; padding: 88px 0 64px; }
+.na-bandeau::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(var(--nuit-filet) 1px, transparent 1px), linear-gradient(90deg, var(--nuit-filet) 1px, transparent 1px); background-size: 72px 72px; opacity: 0.5; mask-image: radial-gradient(ellipse 70% 80% at 50% 0%, #000 0%, transparent 70%); }
+.na-bandeau > * { position: relative; }
+.na-bandeau h1 { font-family: var(--font-affiche); font-weight: 400; font-style: italic; font-size: clamp(64px, 10vw, 128px); line-height: 0.95; letter-spacing: -0.01em; color: var(--nuit-texte); margin: 0 auto 20px; }
+
+/* Appel à l'action de nuit : le halo en bas. */
+.na-appel { background: var(--halo-bas), var(--nuit); color: var(--nuit-texte); padding: 96px 0; }
+
+/* Titres d'affiche (h2 de section). */
+.na-affiche { font-family: var(--font-affiche); font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.01em; }
+
+/* Chiffres clés (Tailark Stats 1) : colonnes séparées par des filets, sans fond de carte. Le premier chiffre mis en avant en citron (9,13 sur la nuit). */
+.na-chiffres { display: grid; grid-template-columns: repeat(var(--na-colonnes, 4), 1fr); text-align: center; }
+.na-chiffres > * { padding: 8px 24px; border-left: 1px solid var(--nuit-filet); }
+.na-chiffres > :first-child { border-left: 0; }
+.na-chiffres .na-valeur { display: block; font-family: var(--font-affiche); font-size: 88px; line-height: 0.95; font-weight: 400; color: var(--nuit-texte); }
+.na-chiffres .na-phare .na-valeur { color: var(--brand-accent); }
+
+/* Carte blanche (sur sable ou sur nuit). */
+.na-carte { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-carte); box-shadow: var(--ombre-carte); color: var(--foreground); }
+
+/* Grille à filets avec survol (21st.dev, « Feature Section with hover effects », Manu Arora, MIT) : une barre de 4 px à gauche grandit et passe au vert de marque,
+   le titre glisse de 8 px. Le vert de marque (3,29 sur blanc) ne porte jamais de texte. Survol seulement sur un appareil qui survole ; focus partout ; mouvement réduit respecté. */
+.na-grille { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; margin: 0; padding: 0; }
+.na-grille > * { position: relative; padding: 40px 32px 36px 36px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background 0.2s; }
+.na-grille > *::before { content: ""; position: absolute; left: 0; top: 50%; width: 4px; height: 24px; transform: translateY(-50%); border-radius: 0 4px 4px 0; background: var(--border); transition: height 0.2s, background 0.2s; }
+.na-grille .na-titre { display: block; transition: transform 0.2s; }
+.na-grille > :focus-within { background: #fff; }
+.na-grille > :focus-within::before { height: 40px; background: var(--brand); }
+.na-grille > :focus-within .na-titre { transform: translateX(8px); }
+@media (hover: hover) {
+  .na-grille > :hover { background: #fff; }
+  .na-grille > :hover::before { height: 40px; background: var(--brand); }
+  .na-grille > :hover .na-titre { transform: translateX(8px); }
+}
+@media (min-width: 901px) {
+  .na-grille > :nth-child(3n) { border-right: 0; }
+  .na-grille > :nth-last-child(-n + 3) { border-bottom: 0; }
+}
+@media (max-width: 900px) {
+  .na-chiffres { grid-template-columns: 1fr 1fr; }
+  .na-chiffres > :nth-child(odd) { border-left: 0; }
+  .na-chiffres > :nth-child(n + 3) { border-top: 1px solid var(--nuit-filet); padding-top: 28px; }
+  .na-grille { grid-template-columns: 1fr 1fr; }
+  .na-grille > :nth-child(even) { border-right: 0; }
+  .na-grille > :last-child, .na-grille > :nth-last-child(2):nth-child(odd) { border-bottom: 0; }
+}
+@media (max-width: 560px) {
+  .na-bandeau { padding: 64px 0 48px; }
+  .na-bandeau h1 { font-size: clamp(56px, 18vw, 80px); }
+  .na-chiffres { grid-template-columns: 1fr; }
+  .na-chiffres > *, .na-chiffres > :nth-child(odd) { border-left: 0; border-top: 1px solid var(--nuit-filet); padding: 24px 12px; }
+  .na-chiffres > :first-child { border-top: 0; }
+  .na-chiffres .na-valeur { font-size: 72px; }
+  .na-grille { grid-template-columns: 1fr; }
+  .na-grille > *, .na-grille > :nth-child(even) { border-right: 0; border-bottom: 1px solid var(--border); }
+  .na-grille > :last-child { border-bottom: 0; }
+  .na-appel { padding: 64px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .na-grille > *, .na-grille > *::before, .na-grille .na-titre { transition: none; }
+  .na-grille > :hover .na-titre, .na-grille > :focus-within .na-titre { transform: none; }
+  .na-grille > :hover::before, .na-grille > :focus-within::before { height: 24px; }
+}
+
+/* Focus visible bicolore : le contour blanc se voit sur la nuit, l'anneau brand-deep sur le clair. */
+.na-nuit :focus-visible, .na-bandeau :focus-visible, .na-appel :focus-visible { outline: 2px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 5px var(--brand-deep); border-radius: 8px; }
